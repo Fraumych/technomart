@@ -1,0 +1,304 @@
+header {
+    .nav {
+        background-color: var(--nav-background);
+        height: 320px;
+    }
+
+    .nav-search {
+        background-color: var(--header-back);
+        margin-bottom: 41px;
+    }
+
+    .nav-s {
+        display: flex;
+    }
+
+    .nav-search a {
+        display: block;
+    }
+
+    .main-logo {
+        position: absolute;
+        width: 220px;
+        font-size: 21px;
+        line-height: 30px;
+        text-align: center;
+        padding: 7px 0 10px;
+        text-transform: uppercase;
+        color: var(--basic-white);
+        background-color: var(--Basic-red);
+        box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+        cursor: pointer;
+        transition: background-color 0.5s;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    .main-logo:active {
+        background-color: var(--Error);
+    }
+
+    .sea {
+        margin-left: 220px;
+        ::placeholder {color: var(--basic-white);}
+    }    
+
+    .search {
+        display: block;
+        width: 285px;       
+        padding: 10px 15px 9px 42px;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--basic-white);
+        background: var(--header-back);
+        border: none;
+        background-image: url(../img/icon-search.png);
+        background-repeat: no-repeat;
+        background-position: 17px 12px;
+        cursor: pointer;
+        outline: none;
+        transition: background-image 0.5s;
+        
+        &:hover {
+            background-image: url(../img/Search.svg);
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+
+        &:focus {
+            color: var(--basic-black);
+            background: var(--basic-white) url(../img/icon-search.svg) no-repeat 17px 12px;
+            opacity: 1;
+        }
+
+        &:focus::placeholder {
+            color: var(--basic-black);
+            opacity: 0.5;
+        }
+    }
+
+    .nav-bookmarks {
+        position: relative;
+        padding: 10px 21px 9px 44px;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--basic-white);
+        
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 13px;
+            left: 18px;
+            width: 14px;
+            height: 16px;
+            background-image: url(../img/icon-bookmark.svg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            opacity: 0.3;
+            transition: opacity 0.5s;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &:active {
+            opacity: 0.3;
+            background-color: #161d29;
+        }
+    }
+    
+    .nav-basket { 
+        padding: 10px 21px 9px 44px;
+        position: relative;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--basic-white);
+        
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 13px;
+            left: 18px;
+            width: 15px;
+            height: 15px;
+            background-image: url(../img/Basket.svg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            opacity: 0.3;
+            transition: opacity 0.5s;
+        }
+        
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+
+    .nav-order {
+        background-color: var(--Basic-green);
+        padding: 10px 17px 9px;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--basic-white);
+        transition: background-color 0.5s;
+
+        &:hover {
+            background-color: var(--Success);
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+
+    .nav-info {
+        display: flex;
+        justify-content: space-between;
+        height: 112px;
+        font-size: 16px;
+        line-height: 23px;
+        color: var(--Basic-red);
+
+        > p {
+            display: block;
+            width: 197px;
+            height: 71px;
+            margin-left: 35px;
+            font-size: 16px;
+            line-height: 23px;
+        }
+    }
+
+    .phone {
+        display: block;
+        position: relative;
+        padding: 5px 45px 5px 74px;
+        margin-bottom: 3px;
+        font-size: 21px;
+        line-height: 30px;
+        color: var(--Basic-red);
+        background-color: transparent;
+        border: 3px solid var(--basic-white);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: 39px;
+            width: 19px;
+            height: 19px;
+            background-image: url(../img/Phone.svg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+    }
+
+    .nav-address p {
+        margin: 0 9px;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--basic-black);
+    }
+
+    .login {
+        display: flex;
+        justify-content: space-between;
+        width: 281px;
+        height: 45px;
+    }
+    .nav-login {
+        display: block;
+        position: relative;
+        padding: 12px 27px 12px 45px;
+        font-size: 21px;
+        line-height: 21px;
+        color: var(--basic-black);
+        background-color: var(--basic-white);
+        transition: color 0.5s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: 19px;
+            width: 20px;
+            height: 17px;
+            background-image: url(../img/icon-login1.svg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            filter: grayscale(1) brightness(2);
+            transition: filter 0.5s;
+        }
+
+        &:hover {
+            color: var(--Basic-red);
+        }
+
+        &:hover::before {
+            filter: grayscale(0) brightness(1);
+        }
+
+        &:active::before {
+            color: var(--header-back);
+            background-image: url(../img/icon-login.svg);
+        }
+        
+        &:active {
+            color: var(--Basic-greylight);
+        }
+    }
+
+    .nav-reg {
+        display: block;
+        padding: 12px 24px;
+        font-size: 21px;
+        line-height: 21px;
+        color: var(--basic-black);
+        background-color: var(--basic-white);
+        transition: color 0.5s;
+        
+        &:hover {
+            color: var(--Basic-red);
+        }
+
+        &:active {
+            color: var(--Basic-greylight);
+        }
+    }
+
+    .main-nav {
+        display: flex;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 18px 31.8px;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--basic-white);
+        background-color: var(--header-second-back);
+        box-shadow: inset 0px -5px 0px var(--footer-dark-grey);
+        transition: background-color 0.5s;
+    }
+
+    .main-nav a:hover {
+        background-color: var(--footer-dark-grey);
+    }
+
+    .main-nav a:active {
+        background-color: #1d2739;
+        span {
+            opacity: 0.3;
+        }
+    }
+
+}

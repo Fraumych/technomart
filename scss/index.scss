@@ -1,0 +1,244 @@
+@import "normalize";
+@import "header";
+@import "main";
+@import "footer";
+@import "catalog";
+
+
+/* cuprum-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/cuprum-v18-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/cuprum-v18-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/cuprum-v18-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/cuprum-v18-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/cuprum-v18-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/cuprum-v18-latin_cyrillic-regular.svg#Cuprum') format('svg'); /* Legacy iOS */
+}
+/* cuprum-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/cuprum-v18-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/cuprum-v18-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/cuprum-v18-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/cuprum-v18-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/cuprum-v18-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/cuprum-v18-latin_cyrillic-700.svg#Cuprum') format('svg'); /* Legacy iOS */
+}
+
+:root {
+    --nav-background: #f3f7f9;
+    --header-back: #293449;
+    --header-second-back: #32425C;
+    --basic-black: #000000;
+    --basic-white: #ffffff;
+    --Basic-red: #EE3643;
+    --Basic-green: #63A63E;
+    --Basic-grey: #3D546F;
+    --Basic-greylight: #C5C5C5;
+    --Basic-background: #F1F5F7;
+    --Special-ylellow: #FFBF47;
+    --Special-blue: #3BBCE3;
+    --Special-lilac: #DC91D8;
+    --Special-greenlight: #8ED78F;
+    --Special-yellowlight: #FFC047;
+    --Success: #5FBB2D;
+    --Warning: #FFBF47;
+    --Error: #BA2732;
+    --Border-grey-light: #EAEAEA;
+    --product-item-value: #a9a9a9;
+    --footer-dark-grey: #293449;
+    --catalog-background: #F7F3EC;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cuprum', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    box-sizing: border-box;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    padding: 0 10px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.not-visibility {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+a {
+    text-decoration: none;
+}
+
+.button {
+    text-align: center;
+    align-items: center;
+    font: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--Basic-red);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    background-color: #ca2737;
+    }
+
+.button:active {
+    background-color: var(--Error);
+}
+
+.new::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 70px;
+    height: 70px;
+    background-image: url(../img/catalogNew.png);
+    background-repeat: no-repeat;
+    background-position: right 0;
+}
+
+.contact-close {
+    display: none;
+}
+.contact-popup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 620px;
+    max-height: 423px;
+    background-color: var(--basic-white);
+    border-top: 7px solid var(--Basic-red);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 11px;
+    }
+
+    input {
+        width: 196px;
+        height: 20px;
+        border: 2px solid #C5C5C5;
+        border-radius: 2px;
+        padding: 7px 10px;
+        margin-bottom: 13px;
+    }
+
+    textarea {
+        width: 432px;
+        height: 98px;
+        border: 2px solid #C5C5C5;
+        border-radius: 2px;
+        padding: 6px 12px;
+    }
+
+    ::placeholder {
+        color: #C5C5C5;
+    }
+
+    .button {
+        width: 460px;
+        padding: 12px 0;
+        line-height: 14px;
+        font-weight: normal;
+    }
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 80px 37px;
+}
+
+.button-close {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 14px;
+    right: 11px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-image: url(../img/icon-close.svg);
+}
+
+.button-close:hover {
+    opacity: 0.5;
+}
+
+.contact-popup-button {
+    background-color: #F4F4F4;
+    padding: 33px 80px;
+    width: 460px;
+}
+
+.map-close {
+    display: none;
+}
+
+.map-popup {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 943px;
+    max-height: 442px;
+    background-color: var(--basic-white);
+    border-top: 7px solid var(--Basic-red);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+
+    .button-close {
+        top: 11px;
+        right: 11px;
+    }
+    img {
+        max-width: 943px;
+        max-height: 442px;
+    }
+}
+
+
