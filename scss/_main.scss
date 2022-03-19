@@ -203,8 +203,11 @@ main {
         }
     
         .product-hover {
-            width: 135px;
-            height: 148px;
+            display: none;
+            position: absolute;
+            background-color: white;
+            width: 158px;
+            height: 141px;
             margin: 8px auto -8px auto;
             
             .buy {
@@ -323,6 +326,9 @@ main {
 
     .product-item:hover {
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        .product-hover {
+            display: block;
+        }
     }
 
     .product-manufacturer {
@@ -444,6 +450,9 @@ main {
                 padding: 10px 0;
                 border-radius: 3px;
             }
+        }
+        .service-info-close {
+            display: none;
         }
     }
 

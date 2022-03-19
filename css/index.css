@@ -940,8 +940,11 @@ main .product-item .img {
 }
 
 main .product-item .product-hover {
-  width: 135px;
-  height: 148px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 158px;
+  height: 141px;
   margin: 8px auto -8px auto;
 }
 
@@ -1048,6 +1051,10 @@ main .product-item:nth-child(4) {
 main .product-item:hover {
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+main .product-item:hover .product-hover {
+  display: block;
 }
 
 main .product-manufacturer {
@@ -1179,6 +1186,10 @@ main .main-service .service-credit .button-feedback {
   width: 200px;
   padding: 10px 0;
   border-radius: 3px;
+}
+
+main .main-service .service-info-close {
+  display: none;
 }
 
 main .features-contacts {
@@ -1857,8 +1868,11 @@ footer .footer-social .copyright a:active {
 }
 
 .catalog-item .product-hover {
-  width: 135px;
-  height: 148px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 158px;
+  height: 141px;
   margin: 8px auto -8px auto;
 }
 
@@ -1965,6 +1979,10 @@ footer .footer-social .copyright a:active {
 .catalog-item:hover {
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.catalog-item:hover .product-hover {
+  display: block;
 }
 
 .pagination-menu {
